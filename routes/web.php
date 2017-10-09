@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Auth::routes();
+
+Route::get('/impressum', [
+    'uses' => 'PageController@getImpressum',
+    'as' => 'impressum',
+]);
